@@ -12,5 +12,7 @@ new_dataframe = pd.read_csv('../docs//ZIPCodes.csv')
 print new_dataframe.describe()
 print new_dataframe.columns
 
+sub_dataframe = new_dataframe[['State','Population','WhitePopulation','BlackPopulation','HispanicPopulation','AsianPopulation','HawaiianPopulation','IndianPopulation','OtherPopulation']].copy()
 print "Doing the grouping by state"
-print new_dataframe.groupby("State").sum()
+sum_frame = sub_dataframe.groupby(['State'], sort=False).sum()
+print sum_frame.sort_values (['Population'], ascending=[False])

@@ -5,7 +5,7 @@ Created on Mar 13, 2017
 '''
 import requests
 from bs4 import BeautifulSoup
-import pandasHOWTOs as pd
+import pandas as pd
 import bs4
 
 nws_weather_by_zip = "http://forecast.weather.gov/zipcity.php?inputstring="
